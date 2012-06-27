@@ -49,7 +49,7 @@ heroku create --stack cedar
 
 g p heroku master
 
-heroku rename cosmos-news-reader-2
+heroku rename cosmos-research-helper
 
 git remote rm heroku
 
@@ -74,6 +74,7 @@ r s
 []---------------------------
 heroku run rake db:migrate
 
+[20120627_175602]====================================
 
 
 ============EOF============
