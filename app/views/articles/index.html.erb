@@ -2,28 +2,26 @@
 
 <table>
   <tr>
+  	<th>Id</th>
     <th>Title</th>
     <th>Text</th>
     <th>Genre</th>
     <th>Url</th>
     <th>Related</th>
     <th>Memo</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Created at</th>
   </tr>
 
 <% @articles.each do |article| %>
   <tr>
-    <td><%= article.title %></td>
+  	<td><%= article.id %></td>
+    <td><%= link_to article.title, article %></td>
     <td><%= article.text %></td>
     <td><%= article.genre %></td>
     <td><%= link_to article.url, article.url, {:target => "_blank"} %></td>
     <td><%= article.related %></td>
     <td><%= article.memo %></td>
-    <td><%= link_to 'Show', article %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= article.created_at %></td>
   </tr>
 <% end %>
 </table>
