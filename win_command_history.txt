@@ -75,6 +75,9 @@ r s
 heroku run rake db:migrate
 
 [20120627_175602]====================================
+rails generate scaffold Article title:string text:text genre:string url:text related:text memo:text
+
+bundle exec rake db:migrate
 
 
 ============EOF============
