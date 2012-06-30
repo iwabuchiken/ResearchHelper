@@ -79,5 +79,8 @@ rails generate scaffold Article title:string text:text genre:string url:text rel
 
 bundle exec rake db:migrate
 
+[20120630_115945]====================================
+rails generate scaffold Memo article_id:integer text:text url:text related:text
+bundle exec rake db:migrate
 
 ============EOF============
