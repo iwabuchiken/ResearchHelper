@@ -40,7 +40,8 @@
 <!--   			Id => <%#= memo.id %><br /> -->
 <!--   			Text => <%#= memo.text %><br /> -->
   			<%= memo.text %><br />
-  			(<%= link_to "Edit", edit_memo_path %>)<br />
+<!--   			(<%#= link_to "Edit", edit_memo_path %>)<br /> -->
+  			(<%= link_to "Edit", :controller => "memos", :action => "edit", :id => memo.id %>)<br />
   		<% else %>
   			Memo => nil<br />
   		<% end %>
