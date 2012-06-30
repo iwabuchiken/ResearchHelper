@@ -29,7 +29,7 @@
 
 <p>
   <b>Memo:</b>
-  <%= @article.memo %>
+  	<%= @article.memo %>
 </p>
 
 <p>
@@ -40,3 +40,8 @@
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back to list', articles_path %> &nbsp;| &nbsp;
 <%= link_to 'Destroy', @article, confirm: 'Are you sure?', method: :delete %>
+
+<hr />
+	<%#= link_to 'New Memo', new_memo_path, :article_id => @article.id %>
+	<%= link_to 'New Memo', :controller => "memos", :action => "new", :article_id => @article.id %>
+<hr />

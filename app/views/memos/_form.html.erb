@@ -13,7 +13,12 @@
 
   <div class="field">
     <%= f.label :article_id %><br />
-    <%= f.number_field :article_id %>
+    <%# if @article_id != nil %>
+    	<%#= f.number_field @article_id %>
+    <%# else %>
+    	<%= f.number_field :article_id %>
+    	<%#= f.text_field :article_id %>
+    <%# end %>
   </div>
   <div class="field">
     <%= f.label :text %><br />

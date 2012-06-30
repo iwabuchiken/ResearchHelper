@@ -26,6 +26,17 @@ class MemosController < ApplicationController
   def new
     @memo = Memo.new
 
+    #
+    @memo_article_id = params[:article_id]
+    article_id = params[:article_id]
+    
+    #
+    # if @article_id != nil
+    if @memo_article_id != nil
+      # @memo.article_id = article_id.to_i
+      @memo.article_id = @memo_article_id.to_i
+    end#if @article_id != nil
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @memo }
@@ -81,3 +92,4 @@ class MemosController < ApplicationController
     end
   end
 end
+

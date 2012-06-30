@@ -3,3 +3,18 @@
 <%= render 'form' %>
 
 <%= link_to 'Back', memos_path %>
+
+<hr />
+@memo_article_id => 
+<% if @memo_article_id != nil %>
+	<%= @memo_article_id %>(<%= @memo_article_id.length %>)
+<% else %>
+	nil
+<% end %>
+
+<hr />
+<% if @memo.article_id != nil %>
+	<%= @memo.article_id %>(<%= @memo.article_id.to_s.length %>)
+<% else %>
+	nil
+<% end %>
