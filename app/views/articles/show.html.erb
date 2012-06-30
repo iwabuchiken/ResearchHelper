@@ -29,7 +29,25 @@
 
 <p>
   <b>Memo:</b>
-  	<%= @article.memo %>
+  	<%#= @article.memo %>
+  	<br />
+  	<% @memos.each_with_index do |memo, i| %>
+  		&lt;Memo <%= i + 1 %>><br />
+  		<%# if @memo != nil %>
+  		<% if memo != nil %>
+<!-- 	  		Id => <%#= @memo.id %><br /> -->
+<!--   			Text => <%#= @memo.text %><br /> -->
+<!--   			Id => <%#= memo.id %><br /> -->
+<!--   			Text => <%#= memo.text %><br /> -->
+  			<%= memo.text %><br />
+  			(<%= link_to "Edit", edit_memo_path %>)<br />
+  		<% else %>
+  			Memo => nil<br />
+  		<% end %>
+  		
+  		---------------------------------<br />
+  	<% end -%>
+  	<%#= @memos.length %>
 </p>
 
 <p>
